@@ -57,6 +57,21 @@ main {
   align-items: center;
 }
 
+.info {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info>img {
+  width: 200px;
+}
+
+.info>h1{
+  margin: 20px;
+}
+
 .links {
   max-width: 1200px;
   display: flex;
