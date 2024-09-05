@@ -7,7 +7,7 @@
 Bem-vindo ao UniArtVerse, um repositório de recursos e ferramentas para desenhistas e criativos. Nosso objetivo é fornecer recursos para uso no processo criativo, e uma comunidade de apoio para ajudar artistas a melhorar suas habilidades e se conectar com outros profissionais da área.
 
 ## Layout web principal
-![Web 1]()
+![Web 1](./src/assets/demo.jpg)
 
 # Tecnologias utilizadas
 ## Front end
