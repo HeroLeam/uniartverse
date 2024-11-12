@@ -86,33 +86,13 @@ main>div>p {
   margin: 20px;
 }
 
-.links {
+#conteudo {
   max-width: 1200px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
   padding: 10px;
-}
-
-.tag {
-  position: relative;
-}
-
-.tag>h2 {
-  margin-left: 40px;
-  margin-bottom: 20px;
-}
-
-.tag::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 30px solid var(--baseColor);
-  border-bottom: 30px solid transparent;
 }
 
 .tooltip {
@@ -144,7 +124,7 @@ main>div>p {
 }
 
 
-.links>a {
+#conteudo>a {
   width: 200px;
   background-color: var(--ghostWhite);
   color: var(--midnightBLue);
@@ -153,22 +133,22 @@ main>div>p {
   border-radius: 0 20px 20px 20px;
 }
 
-.links>a>div {
+#conteudo>a>div {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.links>a>div>p {
+#conteudo>a>div>p {
   font-size: 0.9em;
 }
 
-.links>a {
+#conteudo>a {
   transition: 0.1s ease;
 }
 
-.links>a:hover {
+#conteudo>a:hover {
   box-shadow: 0 0 10px 3px var(--ghostWhite), 0 0 15px 5px var(--baseColor);
   border-radius: 0 0px 20px 20px;
 }
