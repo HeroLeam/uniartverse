@@ -84,19 +84,14 @@ function criarLinks(linhas) {
     link.href = url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.classList.add("tooltip");
+    link.title = descricao;
 
     const div = document.createElement("div");
 
     const h2 = document.createElement("h2");
     h2.textContent = nome;
 
-    const p = document.createElement("p");
-    p.classList.add("desc");
-    p.textContent = descricao;
-
     div.appendChild(h2);
-    div.appendChild(p);
     link.appendChild(div);
     conteudo.appendChild(link);
   });
