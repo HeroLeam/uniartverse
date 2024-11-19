@@ -130,5 +130,10 @@ function getClassNameLabel(cls) {
   return classNames[cls] || cls.charAt(0).toUpperCase() + cls.slice(1); // Para classes não definidas, usa a própria classe
 }
 
-
 carregarDados();
+
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("show");
+  console.log("Menu toggle acionado");
+}

@@ -28,7 +28,7 @@ body {
   color: var(--marina);
 }
 
-header {
+header div {
   background-color: var(--marina);
   color: var(--brilliantWhite);
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.10);
@@ -52,6 +52,19 @@ header a:hover {
 
 header .menuSelected {
   border-bottom: 3px solid var(--brilliantWhite);
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: var(--verde);
+  cursor: pointer;
+}
+
+.adicionar {
+  display: none;
 }
 
 main {
@@ -181,4 +194,48 @@ footer {
   padding: 15px;
   margin-top: auto;
   text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  header {
+    background-color: var(--marina);
+  }
+
+  .hamburger-menu {
+    display: flex;
+    margin: 10px;
+    float: right;
+  }
+
+  #menu {
+    display: none;
+    margin-top: 52px;
+    flex-direction: column;
+    background-color: var(--marina);
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid var(--skyCaptain);
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  #menu a {
+    margin: 5px 0;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--skyCaptain);
+  }
+
+  .floating-button {
+    display: none;
+  }
+
+  .adicionar {
+    display: block;
+  }
 }
