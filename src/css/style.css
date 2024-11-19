@@ -1,7 +1,9 @@
 :root {
-  --baseColor: #0086ff;
-  --midnightBLue: #101720;
-  --ghostWhite: #F0F8FF;
+  --marina: #4f85c3;
+  --skyCaptain: #262834;
+  --brilliantWhite: #edf0ff;
+  --jasmineGreen: #7fc843;
+  --fangangoPink: #e14f80;
 }
 
 body {
@@ -9,12 +11,11 @@ body {
   flex-direction: column;
   height: 100dvh;
   margin: 0;
-  background-color: var(--midnightBLue);
-  color: white;
+  background-color: var(--skyCaptain);
 }
 
 .home {
-  background-color: white;
+  background-color: var(--brilliantWhite);
   color: black;
   padding: 15px;
   text-align: center;
@@ -24,12 +25,12 @@ body {
 }
 
 .home a:hover {
-  color: var(--baseColor);
+  color: var(--marina);
 }
 
 header {
-  background-color: var(--baseColor);
-  color: white;
+  background-color: var(--marina);
+  color: var(--brilliantWhite);
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.10);
   padding: 15px;
   display: flex;
@@ -50,7 +51,7 @@ header a:hover {
 }
 
 header .menuSelected {
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid var(--brilliantWhite);
 }
 
 main {
@@ -64,6 +65,11 @@ main {
 
 main h1 {
   margin-bottom: 20px;
+  color: var(--brilliantWhite);
+}
+
+main p {
+  color: var(--brilliantWhite);
 }
 
 main>div>p {
@@ -96,12 +102,20 @@ main>div>p {
 }
 
 #conteudo>a {
+  display: flex;
+  flex-direction: column;
   width: 200px;
-  background-color: var(--ghostWhite);
-  color: var(--midnightBLue);
+  background-color: var(--brilliantWhite);
+  color: var(--skyCaptain);
   text-align: center;
   padding: 20px;
   border-radius: 20px;
+  overflow: hidden;
+}
+
+#conteudo>a:hover {
+  box-shadow: 0 0 10px 3px var(--brilliantWhite), 0 0 15px 5px var(--marina);
+  transform: scale(1.05);
 }
 
 #conteudo>a>div {
@@ -111,13 +125,31 @@ main>div>p {
   align-items: center;
 }
 
-#conteudo>a {
-  transition: 0.1s ease;
+#conteudo>a .tags {
+  display: flex;
+  justify-content: center;
 }
 
-#conteudo>a:hover {
-  box-shadow: 0 0 10px 3px var(--ghostWhite), 0 0 15px 5px var(--baseColor);
-  transform: scale(1.05);
+#conteudo>a .tags>span {
+  padding: 2px 6px;
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+.new {
+  background-color: var(--marina);
+  color: var(--brilliantWhite);
+}
+
+.free {
+  background-color: var(--jasmineGreen);
+  color: var(--brilliantWhite);
+}
+
+.popular {
+  background-color: var(--fangangoPink);
+  color: var(--brilliantWhite);
 }
 
 .floating-button {
@@ -126,7 +158,7 @@ main>div>p {
   right: 50px;
   width: 40px;
   height: 40px;
-  background-color: var(--baseColor);
+  background-color: var(--marina);
   color: black;
   border-radius: 50%;
   display: flex;
@@ -139,7 +171,7 @@ main>div>p {
 
 .floating-button:hover {
   background-color: white;
-  color: var(--baseColor);
+  color: var(--marina);
 }
 
 footer {

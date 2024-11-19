@@ -16,21 +16,21 @@ async function carregarDados() {
     const dadosFiltrados = linhas
       .map((linha) => {
         if (paginaNome === "aplicativos") {
-          return [linha[1], linha[2], linha[3]];
+          return [linha[1], linha[2], linha[3], linha[4]];
         } else if (paginaNome === "banco-de-recursos") {
-          return [linha[5], linha[6], linha[7]];
+          return [linha[6], linha[7], linha[8], linha[9]];
         } else if (paginaNome === "fontes") {
-          return [linha[9], linha[10], linha[11]];
+          return [linha[11], linha[12], linha[13], linha[14]];
         } else if (paginaNome === "freelance") {
-          return [linha[13], linha[14], linha[15]];
+          return [linha[16], linha[17], linha[18], linha[19]];
         } else if (paginaNome === "ia") {
-          return [linha[17], linha[18], linha[19]];
+          return [linha[21], linha[22], linha[23], linha[24]];
         } else if (paginaNome === "inspiracoes") {
-          return [linha[21], linha[22], linha[23]];
+          return [linha[26], linha[27], linha[28], linha[29]];
         } else if (paginaNome === "portfolios") {
-          return [linha[25], linha[26], linha[27]];
+          return [linha[31], linha[32], linha[33], linha[34]];
         } else if (paginaNome === "utilitarios") {
-          return [linha[29], linha[30], linha[31]];
+          return [linha[36], linha[37], linha[38], linha[39]];
         }
         return null;
       })
@@ -78,23 +78,57 @@ function criarLinks(linhas) {
   conteudo.innerHTML = "";
 
   linhas.forEach((linha) => {
-    const [nome, url, descricao] = linha;
+    const [nome, url, descricao, classe] = linha;
 
     const link = document.createElement("a");
+
+    // Se houver classes, divida-as e adicione ao link
+    const tagsDiv = document.createElement("div");
+    tagsDiv.classList.add("tags");
+
+    if (classe) {
+      const classes = classe.trim().split(/\s+/);
+      classes.forEach((cls) => {
+        if (cls) {
+          link.classList.add(cls); // Adiciona a classe no link
+
+          // Criar span para cada classe
+          const span = document.createElement("span");
+          span.classList.add(cls); // A classe vai para o span
+
+          // Definir o texto do span conforme a classe
+          span.textContent = getClassNameLabel(cls); // Texto da tag
+
+          tagsDiv.appendChild(span); // Adiciona o span na div
+        }
+      });
+    }
+
     link.href = url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.title = descricao;
 
     const div = document.createElement("div");
-
     const h2 = document.createElement("h2");
     h2.textContent = nome;
 
     div.appendChild(h2);
     link.appendChild(div);
+    link.appendChild(tagsDiv);
     conteudo.appendChild(link);
   });
 }
+
+// Função para associar o nome correto à tag (sem necessidade de troca de valores na planilha)
+function getClassNameLabel(cls) {
+  const classNames = {
+    "new": "Novo",
+    "free": "Grátis",
+  };
+
+  return classNames[cls] || cls.charAt(0).toUpperCase() + cls.slice(1); // Para classes não definidas, usa a própria classe
+}
+
 
 carregarDados();
