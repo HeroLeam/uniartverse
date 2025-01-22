@@ -1,5 +1,3 @@
-# uniartverse
-
 [![NPM](https://img.shields.io/npm/l/react)](./LICENSE) 
 
 # Sobre o projeto
