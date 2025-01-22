@@ -64,7 +64,7 @@ header .menuSelected {
   font-size: 1.5em;
   background: none;
   border: none;
-  color: var(--verde);
+  color: white;
   cursor: pointer;
 }
 
@@ -95,6 +95,12 @@ main>div>p {
   text-align-last: center;
 }
 
+hr {
+  margin: 10px 0;
+  border: 1px solid white;
+  width: 100%;
+}
+
 .info {
   max-width: 800px;
   display: flex;
@@ -110,7 +116,8 @@ main>div>p {
   margin: 20px;
 }
 
-#conteudo {
+#conteudo,
+.conteudoExtra {
   max-width: 1200px;
   display: flex;
   justify-content: center;
@@ -119,7 +126,8 @@ main>div>p {
   padding: 10px;
 }
 
-#conteudo>a {
+#conteudo>a,
+.conteudoExtra>a {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -131,24 +139,28 @@ main>div>p {
   overflow: hidden;
 }
 
-#conteudo>a:hover {
+#conteudo>a:hover,
+.conteudoExtra>a:hover {
   box-shadow: 0 0 10px 3px var(--brilliantWhite), 0 0 15px 5px var(--marina);
   transform: scale(1.05);
 }
 
-#conteudo>a>div {
+#conteudo>a>div,
+.conteudoExtra>a>div {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#conteudo>a .tags {
+#conteudo>a .tags,
+.conteudoExtra>a .tags {
   display: flex;
   justify-content: center;
 }
 
-#conteudo>a .tags>span {
+#conteudo>a .tags>span,
+.conteudoExtra>a .tags>span {
   padding: 2px 6px;
   margin: 2px;
   border-radius: 5px;
