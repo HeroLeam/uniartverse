@@ -15,8 +15,24 @@ body {
 }
 
 .gabaritoFontes {
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 10px;
+}
+
+.textoGabaritoFontes {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--brilliantWhite);
+  color: var(--skyCaptain);
   text-align: center;
   font-size: 1.2em;
+  padding: 14px;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .home {
